@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.davidmc24.gradle.plugin.avro' version "1.9.1"
+}
+
+group = 'com.kafka.study.stream.client'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+
+dependencies {
+    implementation "org.apache.avro:avro:1.11.3"
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.kafka.study'
+            artifactId = 'stream'
+            version = '1.0.0'
+
+            from components.java
+        }
+    }
+}

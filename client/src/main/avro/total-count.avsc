@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "namespace": "com.kafka.study.stream.client.dto",
+  "name": "TotalCount",
+  "version": "1",
+  "fields": [
+    { "name": "count", "type": "int", "doc": "Count." },
+    { "name": "amount", "type": "int", "doc": "Amount." }
+  ]
+}

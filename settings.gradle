@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url "https://packages.confluent.io/maven"
+        }
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url "https://packages.confluent.io/maven"
+        }
+    }
+}
+
+rootProject.name = 'kafka-stream'
+
+include("client", "service")

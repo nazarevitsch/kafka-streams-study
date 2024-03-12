@@ -1,0 +1,23 @@
+server:
+  port: 8090
+
+pod:
+  id: 1
+
+kafka:
+  schema:
+    registry:
+      url: http://0.0.0.0:8081
+  producer:
+    batch: 100
+  topic:
+    consume:
+      name: message-topic
+    produce1:
+      name: message-new-topic
+      partition: 1
+    produce2:
+      name: message-new2-topic
+      partition: 1
+  bootstrap:
+    address: localhost:9094
